@@ -93,7 +93,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 88px 0 78px;
   background:
     linear-gradient(135deg, rgba(20, 20, 18, 0.86), rgba(38, 28, 20, 0.74)),
-    url('https://images.unsplash.com/photo-1559416523-140ddc3d238c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    url('https://images.unsplash.com/photo-1686715692509-8cb69d40d081?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .hero::after {
