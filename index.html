@@ -102,6 +102,47 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
     <a href="/ford-bronco-wildtrak-seat-covers.html">Wildtrak</a>
   </nav>
 </header>
+
+  <!-- YMM Finder -->
+  <div style="background:#1e293b;padding:1.5rem 1.5rem;margin-bottom:0">
+    <div style="max-width:860px;margin:0 auto">
+      <p style="color:#f59e0b;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:.6rem">&#128269; Find Seat Covers For Your Vehicle</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.6rem;align-items:flex-end">
+        <div style="flex:1;min-width:100px">
+          <label style="color:#94a3b8;font-size:.72rem;font-weight:700;display:block;margin-bottom:.25rem">YEAR</label>
+          <select id="ymm-year" onchange="ymmUpdate()" style="width:100%;padding:.5rem .6rem;background:#0f172a;color:#fff;border:1px solid #334155;border-radius:6px;font-size:.88rem"><option value="">Year</option></select>
+        </div>
+        <div style="flex:1.5;min-width:130px">
+          <label style="color:#94a3b8;font-size:.72rem;font-weight:700;display:block;margin-bottom:.25rem">MAKE</label>
+          <select id="ymm-make" onchange="ymmUpdate()" disabled style="width:100%;padding:.5rem .6rem;background:#0f172a;color:#fff;border:1px solid #334155;border-radius:6px;font-size:.88rem;opacity:.5"><option value="">Make</option></select>
+        </div>
+        <div style="flex:1.5;min-width:130px">
+          <label style="color:#94a3b8;font-size:.72rem;font-weight:700;display:block;margin-bottom:.25rem">MODEL</label>
+          <select id="ymm-model" disabled style="width:100%;padding:.5rem .6rem;background:#0f172a;color:#fff;border:1px solid #334155;border-radius:6px;font-size:.88rem;opacity:.5"><option value="">Model</option></select>
+        </div>
+        <div><button onclick="ymmSearch()" style="background:#f59e0b;color:#000;border:none;padding:.55rem 1.1rem;border-radius:6px;font-weight:800;font-size:.88rem;cursor:pointer;white-space:nowrap">Find My Covers &#8594;</button></div>
+      </div>
+      <p style="color:#475569;font-size:.72rem;margin-top:.6rem">Or shop custom-fit: <a href="https://bartact.com/collections/seat-covers" target="_blank" rel="noopener" style="color:#f59e0b;font-weight:700">Bartact seat covers</a> — exact-fit for Jeep, Bronco, Tacoma &amp; more.</p>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var MAKES={"Jeep":["Wrangler JL/JLU","Wrangler JK/JKU","Gladiator JT","Wrangler TJ","Cherokee","Grand Cherokee","Compass"],"Ford":["Bronco","F-150","F-250","F-350","Ranger","Explorer","Escape","Maverick"],"Toyota":["Tacoma","4Runner","Tundra","Sequoia","Land Cruiser","RAV4","Camry","Highlander"],"Chevrolet":["Silverado 1500","Silverado 2500","Colorado","Tahoe","Suburban","Equinox","Traverse"],"GMC":["Sierra 1500","Sierra 2500","Canyon","Yukon","Terrain","Acadia"],"RAM":["1500","2500","3500","ProMaster"],"Dodge":["Durango","Challenger","Charger"],"Honda":["CR-V","Pilot","Ridgeline","Passport","Accord","Civic","Odyssey"],"Nissan":["Frontier","Titan","Murano","Rogue","Pathfinder","Armada"],"Subaru":["Outback","Forester","Crosstrek","Ascent","Impreza"],"Hyundai":["Tucson","Santa Fe","Palisade","Kona"],"Kia":["Telluride","Sportage","Sorento","Soul"],"Volkswagen":["Tiguan","Atlas","Taos","Jetta","ID.4"],"BMW":["X3","X5","X7","3 Series","5 Series"],"Mercedes-Benz":["GLE","GLC","GLS","C-Class","E-Class"],"Tesla":["Model 3","Model Y","Model S","Model X","Cybertruck"],"Other":["Other"]};
+    var sel={year:document.getElementById("ymm-year"),make:document.getElementById("ymm-make"),model:document.getElementById("ymm-model")};
+    var cur=new Date().getFullYear();
+    for(var y=cur;y>=2000;y--){var o=document.createElement("option");o.value=y;o.text=y;sel.year.add(o);}
+    window.ymmUpdate=function(){
+      var yr=sel.year.value,mk=sel.make.value;
+      if(yr){sel.make.disabled=false;sel.make.style.opacity="1";if(!mk){while(sel.make.options.length>1)sel.make.remove(1);Object.keys(MAKES).forEach(function(m){var o=document.createElement("option");o.value=m;o.text=m;sel.make.add(o);});}}
+      if(yr&&mk){sel.model.disabled=false;sel.model.style.opacity="1";while(sel.model.options.length>1)sel.model.remove(1);(MAKES[mk]||["Other"]).forEach(function(m){var o=document.createElement("option");o.value=m;o.text=m;sel.model.add(o);});}
+    };
+    window.ymmSearch=function(){
+      var yr=sel.year.value,mk=sel.make.value,md=sel.model.value;
+      if(!yr||!mk){alert("Please select at least a year and make.");return;}
+      window.open("https://www.amazon.com/s?k="+encodeURIComponent(yr+" "+mk+" "+(md||"")+" seat covers")+"&tag=brazenprodu01-20","_blank");
+    };
+  })();
+  </script>
 <div class="hero">
   <h1>Best Ford Bronco Seat Covers 2026 &mdash; 2-Door, 4-Door, Raptor Fitment Guide</h1>
   <p>Custom-fit seat cover reviews for every Bronco configuration &mdash; Bartact #1, plus verified Amazon alternatives. Pick your configuration for the right fitment.</p>
