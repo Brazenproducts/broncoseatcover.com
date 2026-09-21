@@ -104,53 +104,19 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
   </nav>
 </header>
 
-  <!-- YMM Finder -->
-  <div style="background:#1e293b;padding:1.5rem 1.5rem;margin-bottom:0">
-    <div style="max-width:860px;margin:0 auto">
-      <p style="color:#f59e0b;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:.6rem">&#128269; Find Seat Covers For Your Vehicle</p>
-      <div style="display:flex;flex-wrap:wrap;gap:.6rem;align-items:flex-end">
-        <div style="flex:1;min-width:100px">
-          <label style="color:#94a3b8;font-size:.72rem;font-weight:700;display:block;margin-bottom:.25rem">YEAR</label>
-          <select id="ymm-year" onchange="ymmUpdate()" style="width:100%;padding:.5rem .6rem;background:#0f172a;color:#fff;border:1px solid #334155;border-radius:6px;font-size:.88rem"><option value="">Year</option></select>
-        </div>
-        <div style="flex:1.5;min-width:130px">
-          <label style="color:#94a3b8;font-size:.72rem;font-weight:700;display:block;margin-bottom:.25rem">MAKE</label>
-          <select id="ymm-make" onchange="ymmUpdate()" disabled style="width:100%;padding:.5rem .6rem;background:#0f172a;color:#fff;border:1px solid #334155;border-radius:6px;font-size:.88rem;opacity:.5"><option value="">Make</option></select>
-        </div>
-        <div style="flex:1.5;min-width:130px">
-          <label style="color:#94a3b8;font-size:.72rem;font-weight:700;display:block;margin-bottom:.25rem">MODEL</label>
-          <select id="ymm-model" disabled style="width:100%;padding:.5rem .6rem;background:#0f172a;color:#fff;border:1px solid #334155;border-radius:6px;font-size:.88rem;opacity:.5"><option value="">Model</option></select>
-        </div>
-        <div><button onclick="ymmSearch()" style="background:#f59e0b;color:#000;border:none;padding:.55rem 1.1rem;border-radius:6px;font-weight:800;font-size:.88rem;cursor:pointer;white-space:nowrap">Find My Covers &#8594;</button></div>
-      </div>
-      <p style="color:#475569;font-size:.72rem;margin-top:.6rem">Or shop custom-fit: <a href="https://bartact.com/collections/seat-covers" target="_blank" rel="noopener" style="color:#f59e0b;font-weight:700">Bartact seat covers</a> — exact-fit for Jeep, Bronco, Tacoma &amp; more.</p>
-    </div>
+<div style="background:#1e293b;padding:1.2rem 1.5rem;margin-bottom:0">
+  <div style="max-width:860px;margin:0 auto">
+    <p style="color:#f59e0b;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:.45rem">Ford Bronco Seat Covers</p>
+    <p style="color:#cbd5e1;font-size:.92rem;line-height:1.6;margin:0">Ford Bronco seat cover fitment is straightforward here: <strong>2021+ Bronco</strong>. Choose your body style/trim below for the right rear bench or trim-specific notes. No generic year/make/model selector. No Amazon redirect trap.</p>
   </div>
-  <script>
-  (function(){
-    var MAKES={"Jeep":["Wrangler JL/JLU","Wrangler JK/JKU","Gladiator JT","Wrangler TJ","Cherokee","Grand Cherokee","Compass"],"Ford":["Bronco","F-150","F-250","F-350","Ranger","Explorer","Escape","Maverick"],"Toyota":["Tacoma","4Runner","Tundra","Sequoia","Land Cruiser","RAV4","Camry","Highlander"],"Chevrolet":["Silverado 1500","Silverado 2500","Colorado","Tahoe","Suburban","Equinox","Traverse"],"GMC":["Sierra 1500","Sierra 2500","Canyon","Yukon","Terrain","Acadia"],"RAM":["1500","2500","3500","ProMaster"],"Dodge":["Durango","Challenger","Charger"],"Honda":["CR-V","Pilot","Ridgeline","Passport","Accord","Civic","Odyssey"],"Nissan":["Frontier","Titan","Murano","Rogue","Pathfinder","Armada"],"Subaru":["Outback","Forester","Crosstrek","Ascent","Impreza"],"Hyundai":["Tucson","Santa Fe","Palisade","Kona"],"Kia":["Telluride","Sportage","Sorento","Soul"],"Volkswagen":["Tiguan","Atlas","Taos","Jetta","ID.4"],"BMW":["X3","X5","X7","3 Series","5 Series"],"Mercedes-Benz":["GLE","GLC","GLS","C-Class","E-Class"],"Tesla":["Model 3","Model Y","Model S","Model X","Cybertruck"],"Other":["Other"]};
-    var sel={year:document.getElementById("ymm-year"),make:document.getElementById("ymm-make"),model:document.getElementById("ymm-model")};
-    var cur=new Date().getFullYear();
-    for(var y=cur;y>=2000;y--){var o=document.createElement("option");o.value=y;o.text=y;sel.year.add(o);}
-    window.ymmUpdate=function(){
-      var yr=sel.year.value,mk=sel.make.value;
-      if(yr){sel.make.disabled=false;sel.make.style.opacity="1";if(!mk){while(sel.make.options.length>1)sel.make.remove(1);Object.keys(MAKES).forEach(function(m){var o=document.createElement("option");o.value=m;o.text=m;sel.make.add(o);});}}
-      if(yr&&mk){sel.model.disabled=false;sel.model.style.opacity="1";while(sel.model.options.length>1)sel.model.remove(1);(MAKES[mk]||["Other"]).forEach(function(m){var o=document.createElement("option");o.value=m;o.text=m;sel.model.add(o);});}
-    };
-    window.ymmSearch=function(){
-      var yr=sel.year.value,mk=sel.make.value,md=sel.model.value;
-      if(!yr||!mk){alert("Please select at least a year and make.");return;}
-      window.open("https://www.amazon.com/s?k="+encodeURIComponent(yr+" "+mk+" "+(md||"")+" seat covers")+"&tag=brazenprodu01-20","_blank");
-    };
-  })();
-  </script>
+</div>
 <div class="hero">
   <h1>Best Ford Bronco Seat Covers 2026 &mdash; 2-Door, 4-Door, Raptor Fitment Guide</h1>
   <p>Custom-fit seat cover reviews for every Bronco configuration &mdash; Bartact #1, plus verified Amazon alternatives. Pick your configuration for the right fitment.</p>
 </div>
 <div class="container">
   <div class="intro">
-    The 2021+ Ford Bronco has four distinct seat configurations that affect cover fitment: 2-door, 4-door, Raptor (Recaro-style bolsters), and Bronco Sport (completely different platform &mdash; don&rsquo;t cross-shop). Front seat covers are the same between 2-door and 4-door. Rear bench covers are different. The Raptor&rsquo;s bolstered Recaro-style seats require specific covers. This guide covers the main Bronco &mdash; not the Bronco Sport.
+    The 2021+ Ford Bronco has four distinct seat configurations that affect cover fitment: 2-door, 4-door, Raptor (Recaro-style bolsters), and Bronco Sport (completely different platform &mdash; don&rsquo;t cross-shop). Front seat covers are the same between 2-door and 4-door. Rear bench covers are different. The Raptor&rsquo;s bolstered Recaro-style front seats require different covers, and Bartact does not make Raptor front seat covers. This guide covers the main Bronco &mdash; not the Bronco Sport.
   </div>
   <div class="warning-box">
     <strong>&#9888; Bronco vs Bronco Sport &mdash; completely different seats</strong>
@@ -168,7 +134,7 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
   </a>
   <a href="/ford-bronco-raptor-seat-covers.html" style="display:block;border:2px solid #e0e0e0;border-radius:12px;padding:20px 14px;text-decoration:none;text-align:center;color:#222;transition:.15s" onmouseover="this.style.borderColor='#c8860a';this.style.background='#fff8f0'" onmouseout="this.style.borderColor='#e0e0e0';this.style.background=''">
     <div style="font-size:2rem;margin-bottom:8px">&#9889;</div>
-    <strong>Bronco Raptor</strong><br><span style="font-size:.85rem;color:#666">Raptor-specific fitment</span>
+    <strong>Bronco Raptor</strong><br><span style="font-size:.85rem;color:#666">Raptor front seats require Amazon-only alternatives</span>
   </a>
   <a href="/ford-bronco-wildtrak-seat-covers.html" style="display:block;border:2px solid #e0e0e0;border-radius:12px;padding:20px 14px;text-decoration:none;text-align:center;color:#222;transition:.15s" onmouseover="this.style.borderColor='#c8860a';this.style.background='#fff8f0'" onmouseout="this.style.borderColor='#e0e0e0';this.style.background=''">
     <div style="font-size:2rem;margin-bottom:8px">&#127956;</div>
@@ -181,7 +147,7 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
   <tbody>
     <tr><td><a href="/ford-bronco-2door-seat-covers.html">2-Door Bronco</a></td><td>2021&ndash;2026</td><td>Same as 4-door</td><td>Different rear bench</td><td>Yes &mdash; Bronco-specific pattern</td></tr>
     <tr><td><a href="/ford-bronco-4door-seat-covers.html">4-Door Bronco</a></td><td>2021&ndash;2026</td><td>Same as 2-door</td><td>Different rear bench (larger)</td><td>Yes &mdash; Bronco-specific pattern</td></tr>
-    <tr><td><a href="/ford-bronco-raptor-seat-covers.html">Bronco Raptor</a></td><td>2022&ndash;2026</td><td>Recaro-style bolsters</td><td>4-door only</td><td>Check Bartact for Raptor SKU</td></tr>
+    <tr><td><a href="/ford-bronco-raptor-seat-covers.html">Bronco Raptor</a></td><td>2022&ndash;2026</td><td>Recaro-style bolsters</td><td>4-door only</td><td>No — use Amazon options only for Raptor front seats</td></tr>
     <tr><td><a href="/ford-bronco-wildtrak-seat-covers.html">Wildtrak</a></td><td>2021&ndash;2026</td><td>Standard front seats</td><td>4-door rear bench</td><td>Yes &mdash; standard pattern fits</td></tr>
     <tr><td><a href="/ford-bronco-wildtrak-seat-covers.html">Heritage / Heritage Limited</a></td><td>2023&ndash;2026</td><td>Standard front seats</td><td>Rear bench</td><td>Yes &mdash; standard pattern fits</td></tr>
   </tbody>
@@ -322,7 +288,7 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem">
       <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.6rem">
         <a href="https://www.amazon.com/dp/B07YSV5TN6?tag=brazenprodu01-20" target="_blank" rel="nofollow noopener">
-          <img src="https://images-na.ssl-images-amazon.com/images/P/B07YSV5TN6.01._SCLZZZZZZZ_.jpg" alt="FH Group Neoprene Seat Covers — Ford Bronco Sport" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
+          <img src="https://m.media-amazon.com/images/I/71XGkIB4lCL._AC_SL1500_.jpg" alt="FH Group Neoprene Seat Covers — Ford Bronco Sport" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
         <div style="font-weight:700;font-size:.88em;color:#1c2833;line-height:1.4">FH Group Neoprene Seat Covers — Ford Bronco Sport</div>
         <div style="font-size:.8em;color:#555;line-height:1.6">Water-resistant neoprene for Bronco Sport front seats. Machine washable. Great daily driver option.</div>
         <div style="font-size:.88em;font-weight:700;color:#c0392b">$55</div>
@@ -331,7 +297,7 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
       </div>
       <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.6rem">
         <a href="https://www.amazon.com/dp/B09WPPMPG8?tag=brazenprodu01-20" target="_blank" rel="nofollow noopener">
-          <img src="https://images-na.ssl-images-amazon.com/images/P/B09WPPMPG8.01._SCLZZZZZZZ_.jpg" alt="Leader Accessories Seat Covers — Ford Bronco 2021–2026" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
+          <img src="https://m.media-amazon.com/images/I/71MlcA0B4-L._AC_SL1500_.jpg" alt="Leader Accessories Seat Covers — Ford Bronco 2021–2026" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
         <div style="font-weight:700;font-size:.88em;color:#1c2833;line-height:1.4">Leader Accessories Seat Covers — Ford Bronco 2021–2026</div>
         <div style="font-size:.8em;color:#555;line-height:1.6">Custom-fit set for the 2021+ Ford Bronco. Front pair. Airbag-compatible seams. Multiple colors.</div>
         <div style="font-size:.88em;font-weight:700;color:#c0392b">$79</div>
@@ -340,7 +306,7 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
       </div>
       <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.6rem">
         <a href="https://www.amazon.com/dp/B0BQHJHHJ5?tag=brazenprodu01-20" target="_blank" rel="nofollow noopener">
-          <img src="https://images-na.ssl-images-amazon.com/images/P/B0BQHJHHJ5.01._SCLZZZZZZZ_.jpg" alt="Coverado Seat Covers — Ford Bronco 2021–2024" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
+          <img src="https://m.media-amazon.com/images/I/71X+jdUHT7L._AC_SL400_.jpg" alt="Coverado Seat Covers — Ford Bronco 2021–2024" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
         <div style="font-weight:700;font-size:.88em;color:#1c2833;line-height:1.4">Coverado Seat Covers — Ford Bronco 2021–2024</div>
         <div style="font-size:.8em;color:#555;line-height:1.6">Leatherette and mesh combo. Front and rear coverage for the 4-door Bronco. Includes headrests.</div>
         <div style="font-size:.88em;font-weight:700;color:#c0392b">$109</div>
@@ -349,7 +315,7 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
       </div>
       <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.6rem">
         <a href="https://www.amazon.com/dp/B0H5B1FR9Q?tag=brazenprodu01-20" target="_blank" rel="nofollow noopener">
-          <img src="https://images-na.ssl-images-amazon.com/images/P/B0H5B1FR9Q.01._SCLZZZZZZZ_.jpg" alt="Rough Country Neoprene Set — Ford Bronco 2021+" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
+          <img src="https://m.media-amazon.com/images/I/71s2toSrTHL._AC_SL400_.jpg" alt="Rough Country Neoprene Set — Ford Bronco 2021+" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
         <div style="font-weight:700;font-size:.88em;color:#1c2833;line-height:1.4">Rough Country Neoprene Set — Ford Bronco 2021+</div>
         <div style="font-size:.8em;color:#555;line-height:1.6">Waterproof neoprene for the 2021+ Bronco. UV and stain resistant. Fits 2-door and 4-door.</div>
         <div style="font-size:.88em;font-weight:700;color:#c0392b">$119</div>
@@ -358,7 +324,7 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
       </div>
       <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.6rem">
         <a href="https://www.amazon.com/dp/B0DY8WRH5M?tag=brazenprodu01-20" target="_blank" rel="nofollow noopener">
-          <img src="https://images-na.ssl-images-amazon.com/images/P/B0DY8WRH5M.01._SCLZZZZZZZ_.jpg" alt="Full Set Seat Covers — Ford Bronco 4-Door 2021–2026" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
+          <img src="https://m.media-amazon.com/images/I/71RcivfnDHL._AC_SL400_.jpg" alt="Full Set Seat Covers — Ford Bronco 4-Door 2021–2026" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
         <div style="font-weight:700;font-size:.88em;color:#1c2833;line-height:1.4">Full Set Seat Covers — Ford Bronco 4-Door 2021–2026</div>
         <div style="font-size:.8em;color:#555;line-height:1.6">Complete interior set. Includes front, rear, and headrest covers. Airbag-safe construction.</div>
         <div style="font-size:.88em;font-weight:700;color:#c0392b">$139</div>
@@ -367,7 +333,7 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
       </div>
       <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.6rem">
         <a href="https://www.amazon.com/dp/B0BF5CX8W2?tag=brazenprodu01-20" target="_blank" rel="nofollow noopener">
-          <img src="https://images-na.ssl-images-amazon.com/images/P/B0BF5CX8W2.01._SCLZZZZZZZ_.jpg" alt="Bronco Roll Bar Grab Handle Grips — Ford Bronco 2021+" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
+          <img src="https://m.media-amazon.com/images/I/61QwD6W8X7L._AC_SL1500_.jpg" alt="Bronco Roll Bar Grab Handle Grips — Ford Bronco 2021+" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
         <div style="font-weight:700;font-size:.88em;color:#1c2833;line-height:1.4">Bronco Roll Bar Grab Handle Grips — Ford Bronco 2021+</div>
         <div style="font-size:.8em;color:#555;line-height:1.6">Grab handle grips for the 2021+ Bronco roll bar. No-drill install. Improves passenger trail grip.</div>
         <div style="font-size:.88em;font-weight:700;color:#c0392b">$35</div>
@@ -399,7 +365,7 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
 
       <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.6rem">
         <a href="https://www.amazon.com/dp/B0875TRVHP?tag=brazenprodu01-20" target="_blank" rel="nofollow noopener">
-          <img src="https://images-na.ssl-images-amazon.com/images/P/B0875TRVHP.01._SCLZZZZZZZ_.jpg" alt="Bronco Grab Handle Set — Ford Bronco" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
+          <img src="https://m.media-amazon.com/images/I/61epA0Q0WXL._AC_SL1200_.jpg" alt="Bronco Grab Handle Set — Ford Bronco" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
         <div style="font-weight:700;font-size:.88em;color:#1c2833;line-height:1.4">Bronco Grab Handle Set — Ford Bronco</div>
         <div style="font-size:.8em;color:#555;line-height:1.6">Replacement grab handles for Ford Bronco. Pair.</div>
         <div style="font-size:.88em;font-weight:700;color:#c0392b">$45</div>
@@ -408,12 +374,26 @@ footer{background:#1c2e4a;color:#aaa;text-align:center;padding:24px 20px;font-si
       </div>
       <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.6rem">
         <a href="https://www.amazon.com/dp/B09ZTWW893?tag=brazenprodu01-20" target="_blank" rel="nofollow noopener">
-          <img src="https://images-na.ssl-images-amazon.com/images/P/B09ZTWW893.01._SCLZZZZZZZ_.jpg" alt="Bartact Bronco Grab Handles — Ford Bronco 2021+" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
+          <img src="https://m.media-amazon.com/images/I/61epA0Q0WXL._AC_SL1200_.jpg" alt="Bartact Bronco Grab Handles — Ford Bronco 2021+" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
         <div style="font-weight:700;font-size:.88em;color:#1c2833;line-height:1.4">Bartact Bronco Grab Handles — Ford Bronco 2021+</div>
         <div style="font-size:.8em;color:#555;line-height:1.6">USA-made paracord grab handles. Bartact quality for Bronco.</div>
         <div style="font-size:.88em;font-weight:700;color:#c0392b">$89</div>
         <a href="https://www.amazon.com/dp/B09ZTWW893?tag=brazenprodu01-20" target="_blank" rel="nofollow noopener"
            style="display:inline-block;background:#f0a500;color:#111;font-weight:800;padding:9px 16px;border-radius:7px;font-size:.8em;text-align:center;text-decoration:none;margin-top:auto">View on Amazon →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="background:#eef2f7;padding:28px 24px;margin-top:1rem;border-top:1px solid #d9e0ea">
+  <div style="max-width:960px;margin:0 auto">
+    <h2 style="font-size:1.1rem;font-weight:800;color:#1c2833;margin:0 0 .5rem">Bronco Sport</h2>
+    <p style="color:#555;font-size:.9rem;line-height:1.6;margin:0 0 1rem"><strong>Bartact does not make Bronco Sport seat covers.</strong> Bronco Sport uses a different platform and different seats, so keep it separate from the full-size Bronco. If you have a Bronco Sport, shop Amazon-only options.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem">
+      <div style="background:#fff;border:1.5px solid #d9dfe7;border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.6rem">
+        <a href="https://www.amazon.com/dp/B07YSV5TN6?tag=brazenprodu01-20" target="_blank" rel="nofollow noopener"><img src="https://m.media-amazon.com/images/I/71XGkIB4lCL._AC_SL1500_.jpg" alt="FH Group Neoprene Seat Covers — Ford Bronco Sport" style="width:100%;height:150px;object-fit:contain;border-radius:6px;background:#f9f9f9"></a>
+        <div style="font-weight:700;font-size:.88em;color:#1c2833;line-height:1.4">FH Group Neoprene Seat Covers — Ford Bronco Sport</div>
+        <div style="font-size:.8em;color:#555;line-height:1.6">Simple neoprene option for Bronco Sport front seats. Budget-friendly and separate from the full-size Bronco fitment.</div>
+        <a href="https://www.amazon.com/dp/B07YSV5TN6?tag=brazenprodu01-20" target="_blank" rel="nofollow noopener" style="display:inline-block;background:#f0a500;color:#111;font-weight:800;padding:9px 16px;border-radius:7px;font-size:.8em;text-align:center;text-decoration:none;margin-top:auto">View on Amazon →</a>
       </div>
     </div>
   </div>
